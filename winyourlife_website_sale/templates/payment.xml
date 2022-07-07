@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+<!--    <template id="payment_inherited" inherit_id="website_sale.payment">-->
+<!--        <xpath expr="//div[@id='payment_method']//form[1]" position="inside">-->
+<!--            <div id="accept_sale_terms" class="mt-2">-->
+<!--                <input type="checkbox" name="accept_sale_terms"/>-->
+<!--                <label for="accept_sale_terms">I accept the <a href="">sale terms</a></label>-->
+<!--            </div>-->
+<!--        </xpath>-->
+<!--    </template>-->
+</odoo>

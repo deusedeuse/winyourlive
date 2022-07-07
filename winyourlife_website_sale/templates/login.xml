@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="login_inherited" inherit_id="web.login">
+        <xpath expr="//form[1]" position="before">
+            <div t-if="'/shop/cart' in (redirect or '')" class="text-center mt-5">
+              Please log in to confirm your cart.
+            </div>
+        </xpath>
+    </template>
+</odoo>
