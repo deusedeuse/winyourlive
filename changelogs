@@ -1,6 +1,7 @@
 addres_on_eshop (2022/07/08):
   - Reduce the number of required fields for the address for the purchase on the eshop
   - Display the required fields for the address with an *
+  - Display phone and email on address
 
 v1.0.0 (2022/07/08):
   dev (2022/07/08):
