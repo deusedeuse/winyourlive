@@ -43,4 +43,4 @@ msgstr "Téléphone *"
 #. module: winyourlife_website_sale
 #: model_terms:ir.ui.view,arch_db:winyourlife_website_sale.login_inherited
 msgid "Please log in to confirm your cart."
-msgstr "Veuillez vous connecter pour confimer votre panier."
+msgstr "Veuillez vous connecter pour confirmer votre panier."
