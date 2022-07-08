@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <template id="confirmation_inherited" inherit_id="website_sale.confirmation">
+        <xpath expr="//span[@t-esc='order.partner_id']" position="replace">
+            <span t-esc='order.partner_id' t-options="dict(widget='contact', fields=['name', 'phone', 'email', 'address'], no_marker=True, separator=', ')" class="address-inline"/>
+        </xpath>
         <xpath expr="//span[@t-esc='order.partner_shipping_id']" position="replace">
             <span t-esc='order.partner_shipping_id' t-options="dict(widget='contact', fields=['name', 'phone', 'email', 'address'], no_marker=True, separator=', ')"  class="address-inline"/>
         </xpath>
