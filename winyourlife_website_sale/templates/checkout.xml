@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="checkout_inherited" inherit_id="website_sale.checkout">
+        <xpath expr="//t[@t-call='website_sale.address_kanban']" position="inside">
+            <t t-set='display_phone' t-value="1"/>
+            <t t-set='display_email' t-value="1"/>
+        </xpath>
+    </template>
+</odoo>

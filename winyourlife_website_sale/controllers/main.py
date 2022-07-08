@@ -43,3 +43,13 @@ class WebsiteSaleInherit(WebsiteSale):
             return redirection
         else:
             return super().shop_payment(**post)
+
+    def _get_mandatory_fields_billing(self, country_id=False):
+        """Overwrite the method in order to reduce the fields required to make a purchase from the website"""
+        req = ["name", "email"]
+        return req
+
+    def _get_mandatory_fields_shipping(self, country_id=False):
+        """Overwrite the method in order to reduce the fields required to make a purchase from the website"""
+        req = ["name"]
+        return req

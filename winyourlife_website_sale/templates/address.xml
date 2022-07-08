@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="address_kanban_inherited" inherit_id="website_sale.address_kanban">
+        <xpath expr="//t[@t-esc='contact']" position="replace">
+            <t t-if="not (display_phone and display_email)">
+                <t t-esc="contact" t-options="dict(widget='contact', fields=['name', 'address'], no_marker=True)"/>
+            </t>
+            <t t-elif="display_phone and not display_email">
+                <t t-esc="contact" t-options="dict(widget='contact', fields=['name', 'phone', 'address'], no_marker=True)"/>
+            </t>
+            <t t-elif="not display_phone and display_email">
+                <t t-esc="contact" t-options="dict(widget='contact', fields=['name', 'email', 'address'], no_marker=True)"/>
+            </t>
+            <t t-elif="display_phone and display_email">
+                <t t-esc="contact" t-options="dict(widget='contact', fields=['name', 'phone', 'email', 'address'], no_marker=True)"/>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="address_on_payment_inherit" inherit_id="website_sale.address_on_payment">
+        <xpath expr="//span[@t-esc='order.partner_id']" position="replace">
+            <span t-esc="order.partner_id" t-options="dict(widget='contact', fields=['name', 'phone', 'email', 'address'], no_marker=True, separator=', ')" class="address-inline"/>
+        </xpath>
+    </template>
+
+    <template id="address_inherited" inherit_id="website_sale.address">
+        <xpath expr="//label[@for='name']" position="replace">
+            <label class="col-form-label" for="name">Name *</label>
+        </xpath>
+        <xpath expr="//label[@for='email']" position="replace">
+            <label t-attf-class="col-form-label" for="email">Email *</label>
+        </xpath>
+        <xpath expr="//label[@for='phone']" position="replace">
+            <label class="col-form-label" for="phone">Phone *</label>
+        </xpath>
+        <xpath expr="//label[@for='street']" position="attributes">
+            <attribute name="class">col-form-label label-optional</attribute>
+        </xpath>
+        <xpath expr="//label[@for='zip']" position="attributes">
+            <attribute name="class">col-form-label label-optional</attribute>
+        </xpath>
+        <xpath expr="//label[@for='city']" position="attributes">
+            <attribute name="class">col-form-label label-optional</attribute>
+        </xpath>
+        <xpath expr="//label[@for='country_id']" position="attributes">
+            <attribute name="class">col-form-label label-optional</attribute>
+        </xpath>
+        <xpath expr="//label[@for='state_id']" position="attributes">
+            <attribute name="class">col-form-label label-optional</attribute>
+        </xpath>
+        <xpath expr="//input[@name='field_required']" position="after">
+            <div class="form-group text-muted  small">
+                * Required
+            </div>
+        </xpath>
+    </template>
+</odoo>

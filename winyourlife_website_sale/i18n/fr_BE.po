@@ -16,11 +16,31 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: winyourlife_website_sale
+#: model_terms:ir.ui.view,arch_db:winyourlife_website_sale.address_inherited
+msgid "* Required"
+msgstr "* Obligatoire"
+
+#. module: winyourlife_website_sale
 #: model:ir.model,name:winyourlife_website_sale.model_res_partner
 msgid "Contact"
-msgstr "Contact"
+msgstr ""
+
+#. module: winyourlife_website_sale
+#: model_terms:ir.ui.view,arch_db:winyourlife_website_sale.address_inherited
+msgid "Email *"
+msgstr "Courriel *"
+
+#. module: winyourlife_website_sale
+#: model_terms:ir.ui.view,arch_db:winyourlife_website_sale.address_inherited
+msgid "Name *"
+msgstr "Nom *"
+
+#. module: winyourlife_website_sale
+#: model_terms:ir.ui.view,arch_db:winyourlife_website_sale.address_inherited
+msgid "Phone *"
+msgstr "Téléphone *"
 
 #. module: winyourlife_website_sale
 #: model_terms:ir.ui.view,arch_db:winyourlife_website_sale.login_inherited
 msgid "Please log in to confirm your cart."
-msgstr "Veuillez vous connecter pour confirmer votre panier."
+msgstr "Veuillez vous connecter pour confimer votre panier."
