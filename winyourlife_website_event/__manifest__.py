@@ -1,18 +1,16 @@
 # -*- coding: utf-8 -*-
 
 {
-    'name': 'WinYourLife eCommerce',
+    'name': 'WinYourLife Events',
     'category': 'Website/Website',
     'sequence': 50,
-    'summary': 'Winimo customizations of eCommerce',
+    'summary': 'Winimo customizations of Events',
     'website': 'deuse@deuse.be',
-    'version': '15.0.1.0.1',
+    'version': '15.0.1.0.0',
     'description': "",
-    'depends': ['website_sale'],
+    'depends': ['website_event'],
     'data': [
-        # 'views/res_partner_views.xml',
-        'templates/login.xml',
-        # 'templates/payment.xml',
+        'templates/events.xml',
     ],
     'images': [
         'static/description/icon.png',

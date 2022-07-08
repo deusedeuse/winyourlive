@@ -1,2 +1,5 @@
+dev (2022/07/08):
+  - Add loading bar to event on website in order to display the number of participants
+
 dev (2022/07/07):
   - force login to confirm cart

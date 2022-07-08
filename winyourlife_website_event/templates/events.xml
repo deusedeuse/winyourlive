@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="events_list_inherited" inherit_id="website_event.events_list">
+        <xpath expr="//div[@class='mt8 d-flex align-items-center']" position="after">
+            <div t-if="event.seats_limited and event.seats_max != 0" class="s_progress_bar" data-display="inline" data-snippet="s_progress_bar" data-name="Progress Bar">
+              <t t-set="seats_now" t-value="event.seats_max - event.seats_available"/>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped" role="progressbar" t-att-aria-valuenow="seats_now" aria-valuemin="0" t-att-aria-valuemax="event.seats_max" t-attf-style="width: #{int(seats_now/event.seats_max*100)}%; min-width: 3%"/>
+              </div>
+              <div class="text-center">
+                <small>
+                    <t t-esc="seats_now"/> / <t t-esc="event.seats_max"/> attendees
+                </small>
+              </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>
